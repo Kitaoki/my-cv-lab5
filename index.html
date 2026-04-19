@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Моє Резюме</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Ім'я Прізвище</h1>
+    <button id="theme-toggle" style="margin-bottom: 20px;">Змінити тему</button>
+    <header id="main-header">
+        <h1>Юрій Шкіль</h1>
         <p>Вік: 18 років | Студент</p>
     </header>
 
@@ -18,11 +21,11 @@
 
         <section>
             <h2>Технічні навички</h2>
-            <ul>
+            <ul class="skills-list">
                 <li><strong>Мови програмування:</strong> Python</li>
                 <li><strong>Бази даних:</strong> MySQL</li>
                 <li><strong>Мережі:</strong> Cisco Packet Tracer</li>
-                <li><strong>Апаратне забезпечення:</strong> Збірка та налаштування ПК (напр. плати ASUS B650M-PLUS)</li>
+                <li><strong>Апаратне забезпечення:</strong> Збірка та налаштування ПК (напр. сокети AM4|AM5)</li>
             </ul>
         </section>
 
@@ -30,15 +33,39 @@
             <h2>Академічний досвід та проєкти</h2>
             <ul>
                 <li>Розробка бази даних для архітектурного бюро.</li>
-                <li>Курсовий проєкт з комп'ютерних мереж (варіант 26).</li>
-                <li>Лабораторні роботи з програмування на Python: відтворення логіки мови асемблера (варіант 1).</li>
+                <li>Курсовий проєкт з комп'ютерних мереж.</li>
+                <li>Лабораторні роботи з програмування на Python: відтворення логіки мови асемблера.</li>
             </ul>
         </section>
 
         <section>
             <h2>Хобі та інтереси</h2>
-            <p>Відеоігри (Dota 2, CS2, Terraria, Hytale), вивчення ринку комп'ютерних комплектуючих.</p>
+            <p>Відеоігри, плавання, прогулянки, програмування.</p>
         </section>
+
+        <section>
+            <h2>Відгуки роботодавців</h2>
+            <div id="comments-container">Завантаження коментарів...</div>
+        </section>
+
     </main>
+
+    <div id="feedback-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal" style="float: right; cursor: pointer;">&times;</span>
+        <h2>Зворотній зв'язок</h2>
+        <form action="https://formspree.io/f/meeppvyq" method="POST">
+            <label>Ім'я: <input type="text" name="name" required></label><br><br>
+            <label>Email: <input type="email" name="email" required></label><br><br>
+            <label>Телефон: <input type="tel" name="phone"></label><br><br>
+            <label>Повідомлення: <textarea name="message" required></textarea></label><br><br>
+            <button type="submit">Відправити</button>
+        </form>
+    </div>
+</div>
+
+<footer id="footer" style="text-align: center; padding: 20px; background-color: #343a40; color: white; margin-top: 20px; border-radius: 8px;">
+    <p id="browser-info"></p>
+</footer>
 </body>
 </html>
