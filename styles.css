@@ -85,3 +85,21 @@ body.dark-mode .skills-list {
     background-color: #333333;
     border-left: 3px solid #66b2ff;
 }
+
+.skills-section {
+    background-color: #f4f6f9; /* Світло-сірий фон для виділення */
+    border-left: 5px solid #0056b3; /* Синя смужка збоку */
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+}
+
+.skills-section h3 {
+    color: #0056b3;
+    margin-top: 0;
+}
+
+.skills-section ul {
+    line-height: 1.6;
+}
